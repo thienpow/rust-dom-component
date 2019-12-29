@@ -1,0 +1,53 @@
+[package]
+name = "rust-dom"
+version = "0.1.0"
+authors = ["Ken Chong <thienpow@gmail.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+dominator = "0.5.5"
+wasm-bindgen = "0.2.56"
+futures-signals = "0.3.8"
+lazy_static = "1.4.0"
+
+[dependencies.web-sys]
+version = "0.3.33"
+features = [
+    "CharacterData",
+    "Comment",
+    "CssRule",
+    "CssRuleList",
+    "CssStyleDeclaration",
+    "CssStyleRule",
+    "CssStyleSheet",
+    "Document",
+    "DomTokenList",
+    "Element",
+    "Event",
+    "EventTarget",
+    "FocusEvent",
+    "InputEvent",
+    "History",
+    "HtmlElement",
+    "HtmlHeadElement",
+    "HtmlInputElement",
+    "HtmlStyleElement",
+    "HtmlTextAreaElement",
+    "KeyboardEvent",
+    "Location",
+    "MouseEvent",
+    "Node",
+    "Storage",
+    "StyleSheet",
+    "SvgElement",
+    "Text",
+    "UiEvent",
+    "Url",
+    "Window",
+]
+
+[target."cfg(debug_assertions)".dependencies]
+console_error_panic_hook = "0.1.6"
